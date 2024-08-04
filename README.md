@@ -27,7 +27,7 @@ docker compose up
 ```
 
 ## Usage
-The API provides the following endpoints. API documentation can be found at `http://localhost:8080/swagger-ui.html` after running the application.
+The API provides the following endpoints. API documentation can be found at http://localhost:8080/swagger-ui.html after running the application.
 
 ### POST /api/parse
 This endpoint is used to parse a 3GPP Bulk CM file and store it in the database.
