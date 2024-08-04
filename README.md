@@ -1,4 +1,4 @@
-# 3GPP Bulk Configuration Management API
+# 3GPP Bulk Configuration Management Microservice
 This microservice is designed for parsing, storing, and retrieving telecom 3GPP Bulk CM files as defined by [ETSI TS 132 612](https://www.etsi.org/deliver/etsi_ts/132600_132699/132612/18.00.00_60/ts_132612v180000p.pdf).
 
 ## Installation
