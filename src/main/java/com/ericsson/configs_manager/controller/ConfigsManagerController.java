@@ -18,16 +18,16 @@ public class ConfigsManagerController {
     @Autowired
     private ConfigsManagerService cmService;
 
-    @PostMapping("/boda-bulkcmparser")
-    public void bodaBulkCmParser() {
-        /**
-         * https://github.com/bodastage/boda-bulkcmparser/tree/master
-         * 
-         * XML to csv parser for 3GPP Bulk CM data files as defined by ETSI TS 132 615.
-         * TODO: Utilize the Boda bulk CM parser to parse file into CSVs. Save CSVs to MongoDB.
-         */
+    // TODO: Utilize the Boda bulk CM parser to parse file into CSVs. Save CSVs to MongoDB.
+    // @PostMapping("/boda-bulkcmparser")
+    // public void bodaBulkCmParser() {
+    //     /**
+    //      * https://github.com/bodastage/boda-bulkcmparser/tree/master
+    //      * 
+    //      * XML to csv parser for 3GPP Bulk CM data files as defined by ETSI TS 132 615.
+    //      */
         
-    }
+    // }
 
     /**
      * Parses the bulk CM data from the given file.
@@ -36,16 +36,16 @@ public class ConfigsManagerController {
      * @param file The multipart file containing the CM data.
      * @return The result of saving the bulk CM data.
      */
-    @PostMapping("/parse")
+    @PostMapping(path="/parse", consumes = "multipart/form-data")
     public Object parseBulkCmData(@RequestParam("file") MultipartFile file) {
         
         return cmService.saveBulkCm(file);
     }
 
-    @PostMapping("/upload")
-    public void uploadFile(@RequestParam("file") MultipartFile file) {
-        // TODO: Implement file upload with session cache
-    }
+    // TODO: Implement file upload with session cache
+    // @PostMapping("/upload")
+    // public void uploadFile(@RequestParam("file") MultipartFile file) {
+    // }
 
     @GetMapping("/configs/all")
     public Object getConfigs() {
