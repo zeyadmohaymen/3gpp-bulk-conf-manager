@@ -1,0 +1,14 @@
+apiCersion: v1
+kind: Service
+metadata:
+  name: bulk-cm-manager-service
+  labels:
+    app: bulk-cm-manager
+spec:
+  type: LoadBalancer
+  selector:
+    app: bulk-cm-manager
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

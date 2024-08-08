@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bulk-cm-manager-deployment
+  labels:
+    app: bulk-cm-manager
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: bulk-cm-manager
+  template:
+    metadata:
+      labels:
+        app: bulk-cm-manager
+    spec:
+      containers:
+      - name: bulk-cm-manager
+        image: zeyadmans/bulkcm-manager:latest
+        ports:
+        - containerPort: 80
